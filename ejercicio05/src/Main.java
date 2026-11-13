@@ -1,20 +1,25 @@
 import java.util.Scanner;
 
-public class Main {
+public class InvertirCadena {
 
     public static String invertir(String cadena) {
-        if (cadena == null || cadena.length() <= 1) {
+        if (cadena.length() <= 1) {
             return cadena;
+        } else {
+            return invertir(cadena.substring(1)) + cadena.charAt(0);
         }
-        return cadena.charAt(cadena.length() - 1) + invertir(cadena.substring(0, cadena.length() - 1));
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese un texto o palabra: ");
+        
+        System.out.print("Introduce una palabra o frase: ");
         String texto = scanner.nextLine();
-
-        System.out.println("Texto invertido: " + invertir(texto));
+        
+        String resultado = invertir(texto);
+        
+        System.out.println("La cadena al revés es: " + resultado);
+        
         scanner.close();
     }
 }
