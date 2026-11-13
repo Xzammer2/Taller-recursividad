@@ -1,4 +1,4 @@
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class Factorial {
 
@@ -13,7 +13,7 @@ public class Factorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Introduce un número para calcular su factorial: ");
+        System.out.print("Introduce un número: ");
         int numero = scanner.nextInt();
         
         int resultado = factorial(numero);
