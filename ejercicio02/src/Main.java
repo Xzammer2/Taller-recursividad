@@ -2,13 +2,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Función recursiva para sumar de 1 a N
     public static int suma(int n) {
-        // Caso base: si n es 1, la suma es 1 (o 0 si llega a 0)
         if (n <= 1) {
             return n;
         }
-        // Caso recursivo: n + suma(n - 1)
         return n + suma(n - 1);
     }
 
