@@ -1,15 +1,13 @@
-import java.util.Scanner;
-
-public class Principal {
-
-    public static String invertir(String s) {
-        if (s.isEmpty()) return "";
-        return invertir(s.substring(1)) + s.charAt(0);
-    }
-
+public class InvertirPalabraFor {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Escribe una palabra: ");
-        System.out.println("Al revés: " + invertir(sc.nextLine()));
+        String texto = "Java";
+        String textoInvertido = "";
+        
+        for (int i = texto.length() - 1; i >= 0; i--) {
+            textoInvertido += texto.charAt(i);
+        }
+        
+        System.out.println("Original: " + texto);
+        System.out.println("Invertida: " + textoInvertido); // Salida: avaJ
     }
 }
